@@ -8,32 +8,58 @@
 import SwiftUI
 import SwiftData
 
-import SwiftUI
-
 struct ContentView: View {
     @StateObject private var dataStore = DataStore()
+    @StateObject private var audioManager = AudioManager()
     @State private var selectedCard: (String, Category)? = nil
     @State private var showCard = false
 
     var body: some View {
-        ZStack {
-            Color.black.ignoresSafeArea()
+        GeometryReader { gr in
+            ZStack {
+                Color.black.ignoresSafeArea()
 
-            VStack(spacing: 40) {
-                Text("The Real Life")
-                    .font(.custom("Quicksand-Bold", size: 48))
-                    .fontWeight(.bold)
-                    .foregroundColor(.white)
+                VStack(spacing: 40) {
+                    Text("The Real Life")
+                        .font(.custom("Quicksand-Bold", size: 48))
+                        .fontWeight(.bold)
+                        .foregroundColor(.white)
 
-                if !showCard {
-                    CategoryGridView(categories: dataStore.categories, selectedCard: $selectedCard, showCard: $showCard)
+                    if !showCard {
+                        CategoryGridView(categories: dataStore.categories, selectedCard: $selectedCard, showCard: $showCard)
+                    }
+
+                    if let selectedCard = selectedCard, showCard {
+                        FlashCardView(categoryName: selectedCard.0, category: selectedCard.1, showCard: $showCard)
+                    }
                 }
-
-                if let selectedCard = selectedCard, showCard {
-                    FlashCardView(categoryName: selectedCard.0, category: selectedCard.1, showCard: $showCard)
+                .padding(20)
+                
+                
+                VStack {
+                    HStack {
+                        Spacer()
+                        Button(action: {
+                            audioManager.toggleMute()
+                        }) {
+                            Image(systemName: audioManager.isMuted ? "speaker.slash.fill" : "speaker.wave.2.fill")
+                                .font(.title2)
+                                .padding(gr.size.width/10)
+                                .background(.black.opacity(0.6))
+                                .foregroundColor(.white)
+                                .clipShape(Circle())
+                        }
+                    }
+                    Spacer()
                 }
+                .frame(width: gr.size.width, height: gr.size.height)
             }
-            .padding(20)
+            .onAppear {
+                audioManager.play()
+            }
+            .onChange(of: showCard) { _, isShowing in
+                isShowing ? audioManager.pause() : audioManager.play()
+            }
         }
     }
 }
