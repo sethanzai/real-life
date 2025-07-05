@@ -8,53 +8,59 @@
 import SwiftUI
 import SwiftData
 
+import SwiftUI
+
 struct ContentView: View {
-    @Environment(\.modelContext) private var modelContext
-    @Query private var items: [Item]
+    @StateObject private var dataStore = DataStore()
+    @State private var selectedCard: (String, Category)? = nil
+    @State private var showCard = false
 
     var body: some View {
-        NavigationSplitView {
-            List {
-                ForEach(items) { item in
-                    NavigationLink {
-                        Text("Item at \(item.timestamp, format: Date.FormatStyle(date: .numeric, time: .standard))")
-                    } label: {
-                        Text(item.timestamp, format: Date.FormatStyle(date: .numeric, time: .standard))
-                    }
+        ZStack {
+            Color.black.ignoresSafeArea()
+
+            VStack(spacing: 40) {
+                Text("The Real Life")
+                    .font(.custom("Quicksand-Bold", size: 48))
+                    .fontWeight(.bold)
+                    .foregroundColor(.white)
+
+                if !showCard {
+                    CategoryGridView(categories: dataStore.categories, selectedCard: $selectedCard, showCard: $showCard)
                 }
-                .onDelete(perform: deleteItems)
-            }
-#if os(macOS)
-            .navigationSplitViewColumnWidth(min: 180, ideal: 200)
-#endif
-            .toolbar {
-#if os(iOS)
-                ToolbarItem(placement: .navigationBarTrailing) {
-                    EditButton()
-                }
-#endif
-                ToolbarItem {
-                    Button(action: addItem) {
-                        Label("Add Item", systemImage: "plus")
-                    }
+
+                if let selectedCard = selectedCard, showCard {
+                    FlashCardView(categoryName: selectedCard.0, category: selectedCard.1, showCard: $showCard)
                 }
             }
-        } detail: {
-            Text("Select an item")
+            .padding(20)
         }
     }
+}
 
-    private func addItem() {
-        withAnimation {
-            let newItem = Item(timestamp: Date())
-            modelContext.insert(newItem)
-        }
-    }
+struct CategoryGridView: View {
+    let categories: [String: Category]
+    @Binding var selectedCard: (String, Category)?
+    @Binding var showCard: Bool
 
-    private func deleteItems(offsets: IndexSet) {
-        withAnimation {
-            for index in offsets {
-                modelContext.delete(items[index])
+    var body: some View {
+        LazyVGrid(columns: [GridItem(.adaptive(minimum: 150))], spacing: 15) {
+            ForEach(categories.keys.sorted(), id: \.self) { key in
+                if let category = categories[key] {
+                    Button(action: {
+                        self.selectedCard = (key, category)
+                        self.showCard = true
+                    }) {
+                        Text(key)
+                            .font(.custom("Quicksand-Bold", size: 20))
+                            .fontWeight(.bold)
+                            .padding()
+                            .frame(maxWidth: .infinity)
+                            .background(Color(hex: category.color))
+                            .foregroundColor(.white)
+                            .cornerRadius(8)
+                    }
+                }
             }
         }
     }
