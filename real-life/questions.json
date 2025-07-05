@@ -1,0 +1,75 @@
+
+{
+  "Draw": {
+    "label": "Quick Draw!",
+    "color": "#E91E63",
+    "questions": [
+      "Draw a cactus in under 30 seconds!",
+      "Draw your favorite animal wearing a hat.",
+      "Draw your favorite food.",
+      "Draw your dream house.",
+      "Draw your friend as a superhero."
+    ]
+  },
+  "Sing Along": {
+    "label": "Sing Along",
+    "color": "#4CAF50",
+    "questions": [
+      "Sing a song with the word 'sun' in it.",
+      "Sing your favorite song in a silly voice.",
+      "Hum a tune for others to guess.",
+      "Sing a song that makes you happy.",
+      "Sing like you’re in the shower!"
+    ]
+  },
+  "How Did You Do": {
+    "label": "How Did You Do?",
+    "color": "#FFC107",
+    "questions": [
+      "How did you do on the last drawing?",
+      "Did you remember all the lyrics?",
+      "What was the funniest part of your performance?",
+      "Rate your effort from 1–10!",
+      "Would you do it differently next time?"
+    ]
+  },
+  "Bible Trivia": {
+    "label": "Bible Trivia",
+    "color": "#2196F3",
+    "questions": [
+      { "q": "In what sense has Jehovah rested on the seventh creative day? (Ex 31:17)", "a": "Jehovah paused and found satisfaction in what he had made. And although Jesus worked hard while on earth, he still made time to rest and enjoy meals with his friends." },
+      { "q": "Where apparently did the water that caused the global Flood come from? (Ge 7:11)", "a": "The waters 'beneath' were those already on earth, and the waters 'above' were huge quantities of moisture suspended high above the earth, which fell in Noah’s day." },
+      { "q": "Where was the jar of manna kept? (Ex 16:32-34)", "a": "While Aaron gathered manna into a jar at that time, it was deposited before the Testimony once Moses made the Ark and placed the tablets in it." },
+      { "q": "What apparently was the significance of the way the cherubs were positioned on the cover of the Ark? (Ex 25:20)", "a": "They faced each other and bowed toward the cover in an attitude of worship, with wings spread upward and screened over the cover in a guarding manner." },
+      { "q": "What was the showbread? (Ex 25:30)", "a": "The Hebrew term means 'bread of the face' or 'bread of the presence.' It was before Jehovah’s face as an offering constantly." },
+      { "q": "Where did the precious stones on the breastpiece of Israel’s high priest possibly come from? (Ex 28:15-21)", "a": "The Israelites likely obtained the stones from Egypt when they 'stripped the Egyptians' of their valuables on leaving the land." },
+      { "q": "Why was it a capital offense to make holy anointing oil and put it on an unauthorized person? (Ex 30:31-33)", "a": "This showed the importance and sacredness of an appointment confirmed by anointing with sacred oil." },
+      { "q": "Was Jesus a co-Creator? (Ge 1:26)", "a": "No. The Son assisted but the power for creation came from God through his spirit. Jehovah is the Source of all life." },
+      { "q": "Why did Rebekah cover her head, and what lesson does this teach? (Ge 24:65)", "a": "It was a sign of respect for her future husband. The lesson is that humility is a beautiful quality for both men and women." },
+      { "q": "What was the significance of Jacob’s dream involving 'a stairway'? (Ge 28:12, 13)", "a": "The stairway showed there is communication between earth and heaven. Angels ascending and descending indicated their role in ministering between Jehovah and approved humans." }
+    ]
+  },
+  "Who Am I": {
+    "label": "Who Am I?",
+    "color": "#9C27B0",
+    "questions": [
+      { "q": "A prophet of Jehovah. I was sent to preach to Nineveh where over 120,000 men lived. I told the sailors to throw me overboard to calm the sea. I remained inside a big fish for 3 days and 3 nights.", "a": "Jonah." },
+      { "q": "I was assigned as a prophet before I was born. I wrote the Bible books First and Second Kings, Lamentations and a book bearing my name. I remained single. I stated: “In my heart [the word of God] proved to be like a burning fire shut up in my bones.”", "a": "Jeremiah." },
+      { "q": "My parents were named Elkanah and Hannah. I saw corrupt priests take advantage of others, but I remained loyal, honest and brave. I wrote the Bible books Judges, Ruth and a part of a book bearing my name.", "a": "Samuel." },
+      { "q": "I supported my ministry by making tents. I was used by Jehovah to write 14 books of the Christian Greek Scriptures. I resurrected a young man named Eutychus. I traveled thousands of miles as a missionary and established congregations in Europe and Asia Minor.", "a": "Paul." },
+      { "q": "I lived to be 950 years old. I taught my family to obey Jehovah’s instructions. My sons' names were Shem, Ham and Japheth. I faithfully endured as “a preacher of righteousness.” (2 Peter 2:5)", "a": "Noah." },
+      { "q": "Although the Bible does not record anything I said, my example and faith set a pattern for us. Jehovah viewed my sacrifice “with favor.” I worked as a shepherd. (Genesis 4:4)", "a": "Abel." },
+      { "q": "My Hebrew name is Hadassah (meaning Myrtle). My older cousin became my guardian. I showed courage, tact, and a submissive spirit that proved more important than physical beauty.", "a": "Queen Esther." },
+      { "q": "A faithful Moabite widow. I became an ancestress of King David and Jesus Christ. I stated: “Your people will be my people, and your God my God.”", "a": "Ruth." },
+      { "q": "At the age of 100 years old, my son was born. The Bible calls me “the father of all those having faith.” (Romans 4:11) By means of _____ covenant, all nations will certainly bless themselves. (Gen 22:16-18)", "a": "Abraham." },
+      { "q": "My parents were named Amram and Jochebed. (Ex. 1:15-2:10; 6:20) I served as God’s prophet, judge, lawgiver, and leader in ancient Israel. Jehovah inspired me to write the Bible books: Genesis, Exodus, Leviticus, Numbers, Psalm 90 and perhaps 91.", "a": "Moses." },
+      { "q": "His Father’s name was Manoah. He carried the city gate, its side posts and the bar to the top of the mountain in front of Hebron. Delilah betrayed him.", "a": "Samson." },
+      { "q": "My father gave me the name Jerubbaal after I destroyed an altar to Baal. I said: “My clan is the least in Manasseh, and I am the most insignificant in my father’s house.” - Judges 6:15. I refused to rule Israel.", "a": "Gideon." },
+      { "q": "I presented a burnt offering to Jehovah. I prayed: “Let the man of the true God whom you just sent come again to instruct us.” (Judges 13:8) According to the angel who appeared to my wife, out of the Philistines hands would my son save Israel.", "a": "Manoah." },
+      { "q": "Like Moses, I belonged to the tribe of Levi. My sons did not follow my example, and did not rebel against Moses and Aaron. Jesus disciple Jude warned about “the rebellious talk of ____.” (Jude 11)", "a": "Korah." },
+      { "q": "My sisters and I said about Moses: “He even drew water for us and watered the flock.” (Exodus 2:19) My father was a priest. Miriam and Aaron complained about me to Moses that he married “a Cushite wife”. (Numbers 12:1)", "a": "Zipporah." },
+      { "q": "My best friend was David because of his courage and love for Jehovah as he fought Goliath. My Father threw a spear at me. I am the eldest son of King Saul.", "a": "Jonathan." },
+      { "q": "I was 25 years old when I became king of Judah. Jehovah miraculously extended my life by 15 years. Because of my prayers and loyalty, Jehovah sent an angel to strike down 185,000 Assyrian soldiers. (2 Kings 19:15)", "a": "King Hezekiah." }
+    ]
+  }
+}
