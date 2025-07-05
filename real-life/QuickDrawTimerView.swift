@@ -43,5 +43,4 @@ struct QuickDrawTimerView: View {
         startTimer: {},
         resetTimer: {}
     )
-    .previewDisplayName("Initial State")
 }
