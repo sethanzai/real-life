@@ -38,7 +38,7 @@ struct FlashCardView: View {
             .rotation3DEffect(.degrees(flipped ? 180 : 0), axis: (x: 0, y: 1, z: 0))
             .onTapGesture {
                 if isFlipCategory {
-                    withAnimation(.spring()) {
+                    withAnimation(.easeInOut(duration: 1.0)) {
                         flipped.toggle()
                     }
                 }
@@ -101,6 +101,7 @@ struct CardSide: View {
     var body: some View {
         Text(text)
             .font(.custom("Quicksand-SemiBold", size: 32))
+            .minimumScaleFactor(0.5) // ✅ ADDED: Shrinks text to fit
             .padding(40)
             .frame(maxWidth: 700, minHeight: 200)
             .background(Color(red: 0.06, green: 0.06, blue: 0.06))

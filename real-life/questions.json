@@ -1,75 +1,292 @@
-
 {
-  "Draw": {
+  "Quick Draw": {
     "label": "Quick Draw!",
     "color": "#E91E63",
     "questions": [
-      "Draw a cactus in under 30 seconds!",
-      "Draw your favorite animal wearing a hat.",
-      "Draw your favorite food.",
-      "Draw your dream house.",
-      "Draw your friend as a superhero."
+      "Israelites Cross the Red Sea",
+      "Manna",
+      "Moses & The 10 Commandments",
+      "Rahab & The Walls of Jericho",
+      "Gideon & His 300 Men",
+      "Samson",
+      "David & Goliath",
+      "Jonah & The Big Fish",
+      "Ruth and Naomi",
+      "The Little Israelite Girl & Naaman",
+      "Jesus Christ & 144,000",
+      "Angel Visits Mary",
+      "John Baptizes Jesus",
+      "Me’ne, Me’ne, Te’kel & Par’sin",
+      "Daniel, Shaʹdrach, Meʹshach and Abedʹnego",
+      "Daniel in the Lions’ Pit",
+      "Jesus Feeds 5,000 Men",
+      "Jesus Resurrects Lazarus",
+      "The Good Samaritan",
+      "Armageddon"
     ]
   },
-  "Sing Along": {
-    "label": "Sing Along",
+  "Sing/Hum Along": {
+    "label": "Sing/Hum Along",
     "color": "#4CAF50",
     "questions": [
-      "Sing a song with the word 'sun' in it.",
-      "Sing your favorite song in a silly voice.",
-      "Hum a tune for others to guess.",
-      "Sing a song that makes you happy.",
-      "Sing like you’re in the shower!"
+      "SONG 20 You Gave Your Precious Son",
+      "SONG 38 He Will Make You Strong",
+      "SONG 73 Grant Us Boldness",
+      "SONG 3 Our Strength, Our Hope, Our Confidence",
+      "SONG 61 Forward, You Witnesses!",
+      "SONG 56 Make the Truth Your Own",
+      "SONG 63 We’re Jehovah’s Witnesses!",
+      "SONG 2 Jehovah Is Your Name",
+      "SONG 139 See Yourself When All Is New",
+      "SONG 141 The Miracle of Life",
+      "SONG 127 The Sort of Person I Should Be",
+      "SONG 56 Make the Truth Your Own",
+      "SONG 73 Grant Us Boldness",
+      "SONG 81 The Life of a Pioneer",
+      "SONG 89 Listen, Obey, and Be Blessed",
+      "SONG 135 Jehovah’s Warm Appeal: “Be Wise, My Son”",
+      "SONG 30 My Father, My God and Friend",
+      "SONG 144 Keep Your Eyes on the Prize!",
+      "SONG 151 He Will Call",
+      "SONG 153 Give Me Courage",
+      "SONG 156 With Eyes of Faith",
+      "SONG 60 It Means Their Life",
+      "SONG 83 “From House to House”",
+      "SONG 44 A Prayer of the Lowly One",
+      "SONG 132 Now We Are One",
+      "SONG 22 The Kingdom Is in Place—Let It Come!",
+      "SONG 140 Life Without End—At Last!"
     ]
   },
   "How Did You Do": {
     "label": "How Did You Do?",
     "color": "#FFC107",
     "questions": [
-      "How did you do on the last drawing?",
-      "Did you remember all the lyrics?",
-      "What was the funniest part of your performance?",
-      "Rate your effort from 1–10!",
-      "Would you do it differently next time?"
+      "I forgot to turn in my field service report on time. \r \r Move back: 1 space",
+      "I woke up late and didn’t make it to the meeting for field service on time. \r \r Move back: 2 spaces",
+      "I didn’t prepare for my Bible study, or prepared the wrong lesson. \r \r Move back: 1 space",
+      "Attended meeting on Zoom even though I didn’t have a good excuse. \r \r Move back: 1 space",
+      "I attended the meeting even though I had symptoms and got everyone sick. \r \r Move back: 3 spaces",
+      "I sat in the infirmed section even though I was not qualified. \r \r Move back: 1 space",
+      "I talked too much at a Bible study and related everything I knew about a subject. \r \r Move back: 2 spaces",
+      "I used a complicated illustration and confused my student. \r \r Move back: 2 spaces",
+      "Saw a GB and ran to take a selfie without their consent. \r \r Move back: 4 spaces",
+      "I didn’t listen carefully and quickly dismissed my Bible student’s feelings or concerns. \r \r Move back: 3 spaces",
+      "I forgot to put my phone on silent mode during the meeting and distracted the audience. \r \r Move back: 1 space",
+      "I entered the convention site to save seats for everyone before 8:15am and got counseled. \r \r Move back: 2 spaces",
+      "I was not flexible and insisted on starting a conversation on a topic I had in mind. \r \r Move back: 2 spaces",
+      "I volunteered to welcome the friends during the international convention. \r \r Move ahead: 2 spaces",
+      "I showed support during my CO visit by going out in service and provided a meal. \r \r Move ahead: 2 spaces",
+      "I widened out and got to know someone better in the congregation other than my usual friends. \r \r Move ahead: 2 spaces",
+      "Participated for general cleaning at my congregation. \r \r Move ahead: 2 spaces",
+      "Went to visit Bethel and it encouraged me to reach for my spiritual goals. \r \r Move ahead: 3 spaces",
+      "Helped a fellow member of the congregation to move into their new home. \r \r Move ahead: 3 spaces",
+      "I started a Bible Study with someone interested. \r \r Move ahead: 3 spaces",
+      "Worked hard on a comment and encouraged everyone in the meeting. \r \r Move ahead: 2 spaces",
+      "You put some of your allowance in the contribution box even though your funds are low. \r \r Move ahead: 3 spaces",
+      "Adapted my schedule to the other person so I can follow up on their interest in the truth. \r \r Move ahead: 2 spaces",
+      "Persevered in following up a not-at-home call and found them home. \r \r Move ahead: 3 spaces",
+      "Participated in a seldom-work territory with my congregation. \r \r Move ahead: 3 spaces"
     ]
   },
   "Bible Trivia": {
     "label": "Bible Trivia",
     "color": "#2196F3",
     "questions": [
-      { "q": "In what sense has Jehovah rested on the seventh creative day? (Ex 31:17)", "a": "Jehovah paused and found satisfaction in what he had made. And although Jesus worked hard while on earth, he still made time to rest and enjoy meals with his friends." },
-      { "q": "Where apparently did the water that caused the global Flood come from? (Ge 7:11)", "a": "The waters 'beneath' were those already on earth, and the waters 'above' were huge quantities of moisture suspended high above the earth, which fell in Noah’s day." },
-      { "q": "Where was the jar of manna kept? (Ex 16:32-34)", "a": "While Aaron gathered manna into a jar at that time, it was deposited before the Testimony once Moses made the Ark and placed the tablets in it." },
-      { "q": "What apparently was the significance of the way the cherubs were positioned on the cover of the Ark? (Ex 25:20)", "a": "They faced each other and bowed toward the cover in an attitude of worship, with wings spread upward and screened over the cover in a guarding manner." },
-      { "q": "What was the showbread? (Ex 25:30)", "a": "The Hebrew term means 'bread of the face' or 'bread of the presence.' It was before Jehovah’s face as an offering constantly." },
-      { "q": "Where did the precious stones on the breastpiece of Israel’s high priest possibly come from? (Ex 28:15-21)", "a": "The Israelites likely obtained the stones from Egypt when they 'stripped the Egyptians' of their valuables on leaving the land." },
-      { "q": "Why was it a capital offense to make holy anointing oil and put it on an unauthorized person? (Ex 30:31-33)", "a": "This showed the importance and sacredness of an appointment confirmed by anointing with sacred oil." },
-      { "q": "Was Jesus a co-Creator? (Ge 1:26)", "a": "No. The Son assisted but the power for creation came from God through his spirit. Jehovah is the Source of all life." },
-      { "q": "Why did Rebekah cover her head, and what lesson does this teach? (Ge 24:65)", "a": "It was a sign of respect for her future husband. The lesson is that humility is a beautiful quality for both men and women." },
-      { "q": "What was the significance of Jacob’s dream involving 'a stairway'? (Ge 28:12, 13)", "a": "The stairway showed there is communication between earth and heaven. Angels ascending and descending indicated their role in ministering between Jehovah and approved humans." }
+      {
+        "q": "In what sense has Jehovah rested on the seventh creative day? (Ex 31:17)",
+        "a": "Jehovah paused and found satisfaction in what he had made. And although Jesus worked hard while on earth, he still made time to rest and enjoy meals with his friends."
+      },
+      {
+        "q": "Where apparently did the water that caused the global Flood come from? (Ge 7:11)",
+        "a": "The waters 'beneath' were those already on earth, and the waters 'above' were huge quantities of moisture suspended high above the earth, which fell in Noah’s day."
+      },
+      {
+        "q": "Where was the jar of manna kept? (Ex 16:32-34)",
+        "a": "While Aaron gathered manna into a jar at that time, it was deposited before the Testimony once Moses made the Ark and placed the tablets in it."
+      },
+      {
+        "q": "What apparently was the significance of the way the cherubs were positioned on the cover of the Ark? (Ex 25:20)",
+        "a": "They faced each other and bowed toward the cover in an attitude of worship, with wings spread upward and screened over the cover in a guarding manner."
+      },
+      {
+        "q": "What was the showbread? (Ex 25:30)",
+        "a": "The Hebrew term means 'bread of the face' or 'bread of the presence.' It was before Jehovah’s face as an offering constantly."
+      },
+      {
+        "q": "Where did the precious stones on the breastpiece of Israel’s high priest possibly come from? (Ex 28:15-21)",
+        "a": "The Israelites likely obtained the stones from Egypt when they 'stripped the Egyptians' of their valuables on leaving the land."
+      },
+      {
+        "q": "Why was it a capital offense to make holy anointing oil and put it on an unauthorized person? (Ex 30:31-33)",
+        "a": "This showed the importance and sacredness of an appointment confirmed by anointing with sacred oil."
+      },
+      {
+        "q": "Was Jesus a co-Creator? (Ge 1:26)",
+        "a": "No. The Son assisted but the power for creation came from God through his spirit. Jehovah is the Source of all life."
+      },
+      {
+        "q": "Why did Rebekah cover her head, and what lesson does this teach? (Ge 24:65)",
+        "a": "It was a sign of respect for her future husband. The lesson is that humility is a beautiful quality for both men and women."
+      },
+      {
+        "q": "What was the significance of Jacob’s dream involving 'a stairway'? (Ge 28:12, 13)",
+        "a": "The stairway showed there is communication between earth and heaven. Angels ascending and descending indicated their role in ministering between Jehovah and approved humans."
+      },
+      {
+        "q": "Name the 12 apostles.",
+        "a": "Peter, Andrew, James, John, Philip, Bartholomew, Matthew, Thomas, Thaddeus, Simon, Judas, James."
+      },
+      {
+        "q": "According to the Bible, who is the oldest man who ever lived, and how old was he when he died? (Gen. 5:27)",
+        "a": "Methuselah, who lived 969 years."
+      },
+      {
+        "q": "What does Genesis 6:6 reveal about how our conduct can affect Jehovah’s feelings? (Ps. 78:40, 41; Prov. 27:11)",
+        "a": "Our conduct can grieve Jehovah or bring him delight; he is deeply affected by our actions."
+      },
+      {
+        "q": "How can we imitate Noah when we receive direction through Jehovah’s organization? (Gen. 6:22; 1 John 5:3)",
+        "a": "By obediently doing exactly what Jehovah asks without delay, just as Noah did."
+      },
+      {
+        "q": "How does the account of Noah and his family strengthen our confidence in Jehovah’s ability to deliver his people? (2 Pet. 2:9)",
+        "a": "It shows that Jehovah knows how to rescue loyal ones from trials and preserve them through difficult times."
+      },
+      {
+        "q": "How long did it take for the Flood waters to go down? (Gen. 7:24)",
+        "a": "150 days."
+      },
+      {
+        "q": "How can we today provide 'a restful odor' to Jehovah? (Gen. 8:21; Heb. 13:15, 16)",
+        "a": "By offering praise, good works, and unselfish sacrifices that please him."
+      },
+      {
+        "q": "What did Noah do when he first came out of the ark?",
+        "a": "He made an offering to thank God for saving his family from the great flood."
+      },
+      {
+        "q": "What covenant did Jehovah make with all of earth’s creatures? (Gen. 9:10, 11)",
+        "a": "The Rainbow Covenant — that he would never again destroy all life with a flood."
+      },
+      {
+        "q": "What example in praising Jehovah did Miriam and the women at the Red Sea set for Christian women today? (Ex. 15:20, 21; Ps. 68:11)",
+        "a": "They praised Jehovah with song and music, showing that women can play an important part in publicly praising God today too."
+      },
+      {
+        "q": "For how many years did the Israelites eat manna, how did this test them, and what can we learn from this account? (Ex. 16:35; Num. 11:4-6; 1 Cor. 10:10, 11)",
+        "a": "They ate manna for 40 years. This tested their trust in Jehovah’s provision and taught them to be content. We learn the importance of being grateful for Jehovah’s provisions and not to complain."
+      },
+      {
+        "q": "What does Exodus 16:8 show regarding the need for us to respect theocratic appointments in the Christian congregation? (Heb. 13:17)",
+        "a": "Complaints against those appointed by Jehovah are actually directed at Jehovah himself. We should respect and support theocratic arrangements."
+      },
+      {
+        "q": "How does Numbers 14:24 show that Jehovah takes a personal interest in each one of his servants? (1 Ki. 19:18; Prov. 15:3)",
+        "a": "Jehovah rewarded Caleb’s faithfulness and courage by letting him enter the Promised Land. This shows that Jehovah knows and cares about each loyal servant individually."
+      },
+      {
+        "q": "Who were the 2 spies who showed faith in Jehovah?",
+        "a": "Joshua and Caleb."
+      },
+      {
+        "q": "What vital lesson can we learn from the sign of Aaron’s rod? (Num. 17:10; Acts 20:28; Phil. 2:14; Heb. 13:17)",
+        "a": "Jehovah shows whom he has chosen to lead. We must respect and support the authority of those whom Jehovah appoints, avoiding jealousy and complaints."
+      },
+      {
+        "q": "Who rebelled against the authority of Moses and Aaron, and what did they say to Moses? (Numbers 16:1-3)",
+        "a": "Korah, Dathan, and Abiram led a rebellion, saying: 'You take too much upon yourselves, for all the assembly are holy.' They challenged Jehovah’s arrangement."
+      },
+      {
+        "q": "What do we learn from the way Jehovah cared for the Israelites in the wilderness? (Deut. 29:5; Matt. 6:31; Heb. 13:5; Jas. 1:17)",
+        "a": "Jehovah lovingly provided for their needs — clothes, food, and protection. This teaches us to trust that Jehovah will care for our needs today."
+      },
+      {
+        "q": "Who is Balak, and why does he send for Balaam?",
+        "a": "Balak, the king of Moab, was afraid of the Israelites and sent for Balaam to curse them."
+      },
+      {
+        "q": "Read Judges 8:1-3. When it comes to handling personal differences with a brother or a sister, what can we learn from the way Gideon solved the dispute with the Ephraimites? (Prov. 15:1; Matt. 5:23, 24; Luke 9:48)",
+        "a": "Gideon used a mild answer to calm anger and preserve peace. We learn to respond humbly and peacefully when resolving disagreements."
+      },
+      {
+        "q": "How is Jephthah’s daughter a fine example for young Christians in pursuing a career in full-time service? (Judg. 11:36; Matt. 6:33; Phil. 3:8)",
+        "a": "She supported her father’s vow and willingly gave up a normal life to serve Jehovah fully. Young Christians can imitate her self-sacrificing spirit."
+      }
     ]
   },
   "Who Am I": {
     "label": "Who Am I?",
     "color": "#9C27B0",
     "questions": [
-      { "q": "A prophet of Jehovah. I was sent to preach to Nineveh where over 120,000 men lived. I told the sailors to throw me overboard to calm the sea. I remained inside a big fish for 3 days and 3 nights.", "a": "Jonah." },
-      { "q": "I was assigned as a prophet before I was born. I wrote the Bible books First and Second Kings, Lamentations and a book bearing my name. I remained single. I stated: “In my heart [the word of God] proved to be like a burning fire shut up in my bones.”", "a": "Jeremiah." },
-      { "q": "My parents were named Elkanah and Hannah. I saw corrupt priests take advantage of others, but I remained loyal, honest and brave. I wrote the Bible books Judges, Ruth and a part of a book bearing my name.", "a": "Samuel." },
-      { "q": "I supported my ministry by making tents. I was used by Jehovah to write 14 books of the Christian Greek Scriptures. I resurrected a young man named Eutychus. I traveled thousands of miles as a missionary and established congregations in Europe and Asia Minor.", "a": "Paul." },
-      { "q": "I lived to be 950 years old. I taught my family to obey Jehovah’s instructions. My sons' names were Shem, Ham and Japheth. I faithfully endured as “a preacher of righteousness.” (2 Peter 2:5)", "a": "Noah." },
-      { "q": "Although the Bible does not record anything I said, my example and faith set a pattern for us. Jehovah viewed my sacrifice “with favor.” I worked as a shepherd. (Genesis 4:4)", "a": "Abel." },
-      { "q": "My Hebrew name is Hadassah (meaning Myrtle). My older cousin became my guardian. I showed courage, tact, and a submissive spirit that proved more important than physical beauty.", "a": "Queen Esther." },
-      { "q": "A faithful Moabite widow. I became an ancestress of King David and Jesus Christ. I stated: “Your people will be my people, and your God my God.”", "a": "Ruth." },
-      { "q": "At the age of 100 years old, my son was born. The Bible calls me “the father of all those having faith.” (Romans 4:11) By means of _____ covenant, all nations will certainly bless themselves. (Gen 22:16-18)", "a": "Abraham." },
-      { "q": "My parents were named Amram and Jochebed. (Ex. 1:15-2:10; 6:20) I served as God’s prophet, judge, lawgiver, and leader in ancient Israel. Jehovah inspired me to write the Bible books: Genesis, Exodus, Leviticus, Numbers, Psalm 90 and perhaps 91.", "a": "Moses." },
-      { "q": "His Father’s name was Manoah. He carried the city gate, its side posts and the bar to the top of the mountain in front of Hebron. Delilah betrayed him.", "a": "Samson." },
-      { "q": "My father gave me the name Jerubbaal after I destroyed an altar to Baal. I said: “My clan is the least in Manasseh, and I am the most insignificant in my father’s house.” - Judges 6:15. I refused to rule Israel.", "a": "Gideon." },
-      { "q": "I presented a burnt offering to Jehovah. I prayed: “Let the man of the true God whom you just sent come again to instruct us.” (Judges 13:8) According to the angel who appeared to my wife, out of the Philistines hands would my son save Israel.", "a": "Manoah." },
-      { "q": "Like Moses, I belonged to the tribe of Levi. My sons did not follow my example, and did not rebel against Moses and Aaron. Jesus disciple Jude warned about “the rebellious talk of ____.” (Jude 11)", "a": "Korah." },
-      { "q": "My sisters and I said about Moses: “He even drew water for us and watered the flock.” (Exodus 2:19) My father was a priest. Miriam and Aaron complained about me to Moses that he married “a Cushite wife”. (Numbers 12:1)", "a": "Zipporah." },
-      { "q": "My best friend was David because of his courage and love for Jehovah as he fought Goliath. My Father threw a spear at me. I am the eldest son of King Saul.", "a": "Jonathan." },
-      { "q": "I was 25 years old when I became king of Judah. Jehovah miraculously extended my life by 15 years. Because of my prayers and loyalty, Jehovah sent an angel to strike down 185,000 Assyrian soldiers. (2 Kings 19:15)", "a": "King Hezekiah." }
+      {
+        "q": "A prophet of Jehovah. I was sent to preach to Nineveh where over 120,000 men lived. I told the sailors to throw me overboard to calm the sea. I remained inside a big fish for 3 days and 3 nights.",
+        "a": "Jonah."
+      },
+      {
+        "q": "I was assigned as a prophet before I was born. I wrote the Bible books First and Second Kings, Lamentations and a book bearing my name. I remained single. I stated: “In my heart [the word of God] proved to be like a burning fire shut up in my bones.”",
+        "a": "Jeremiah."
+      },
+      {
+        "q": "My parents were named Elkanah and Hannah. I saw corrupt priests take advantage of others, but I remained loyal, honest and brave. I wrote the Bible books Judges, Ruth and a part of a book bearing my name.",
+        "a": "Samuel."
+      },
+      {
+        "q": "I supported my ministry by making tents. I was used by Jehovah to write 14 books of the Christian Greek Scriptures. I resurrected a young man named Eutychus. I traveled thousands of miles as a missionary and established congregations in Europe and Asia Minor.",
+        "a": "Paul."
+      },
+      {
+        "q": "I lived to be 950 years old. I taught my family to obey Jehovah’s instructions. My sons' names were Shem, Ham and Japheth. I faithfully endured as “a preacher of righteousness.” (2 Peter 2:5)",
+        "a": "Noah."
+      },
+      {
+        "q": "Although the Bible does not record anything I said, my example and faith set a pattern for us. Jehovah viewed my sacrifice “with favor.” I worked as a shepherd. (Genesis 4:4)",
+        "a": "Abel."
+      },
+      {
+        "q": "My Hebrew name is Hadassah (meaning Myrtle). My older cousin became my guardian. I showed courage, tact, and a submissive spirit that proved more important than physical beauty.",
+        "a": "Queen Esther."
+      },
+      {
+        "q": "A faithful Moabite widow. I became an ancestress of King David and Jesus Christ. I stated: “Your people will be my people, and your God my God.”",
+        "a": "Ruth."
+      },
+      {
+        "q": "At the age of 100 years old, my son was born. The Bible calls me “the father of all those having faith.” (Romans 4:11) By means of _____ covenant, all nations will certainly bless themselves. (Gen 22:16-18)",
+        "a": "Abraham."
+      },
+      {
+        "q": "My parents were named Amram and Jochebed. (Ex. 1:15-2:10; 6:20) I served as God’s prophet, judge, lawgiver, and leader in ancient Israel. Jehovah inspired me to write the Bible books: Genesis, Exodus, Leviticus, Numbers, Psalm 90 and perhaps 91.",
+        "a": "Moses."
+      },
+      {
+        "q": "His Father’s name was Manoah. He carried the city gate, its side posts and the bar to the top of the mountain in front of Hebron. Delilah betrayed him.",
+        "a": "Samson."
+      },
+      {
+        "q": "My father gave me the name Jerubbaal after I destroyed an altar to Baal. I said: “My clan is the least in Manasseh, and I am the most insignificant in my father’s house.” - Judges 6:15. I refused to rule Israel.",
+        "a": "Gideon."
+      },
+      {
+        "q": "I presented a burnt offering to Jehovah. I prayed: “Let the man of the true God whom you just sent come again to instruct us.” (Judges 13:8) According to the angel who appeared to my wife, out of the Philistines hands would my son save Israel.",
+        "a": "Manoah."
+      },
+      {
+        "q": "Like Moses, I belonged to the tribe of Levi. My sons did not follow my example, and did not rebel against Moses and Aaron. Jesus disciple Jude warned about “the rebellious talk of ____.” (Jude 11)",
+        "a": "Korah."
+      },
+      {
+        "q": "My sisters and I said about Moses: “He even drew water for us and watered the flock.” (Exodus 2:19) My father was a priest. Miriam and Aaron complained about me to Moses that he married “a Cushite wife”. (Numbers 12:1)",
+        "a": "Zipporah."
+      },
+      {
+        "q": "My best friend was David because of his courage and love for Jehovah as he fought Goliath. My Father threw a spear at me. I am the eldest son of King Saul.",
+        "a": "Jonathan."
+      },
+      {
+        "q": "I was 25 years old when I became king of Judah. Jehovah miraculously extended my life by 15 years. Because of my prayers and loyalty, Jehovah sent an angel to strike down 185,000 Assyrian soldiers. (2 Kings 19:15)",
+        "a": "King Hezekiah."
+      }
     ]
   }
 }
