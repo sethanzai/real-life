@@ -45,7 +45,7 @@ struct FlashCardView: View {
             }
             .onAppear(perform: showRandomQuestion)
 
-            if categoryName == "Draw" {
+            if categoryName == "Quick Draw" {
                 QuickDrawTimerView(timeLeft: $timeLeft, isTimerRunning: $isTimerRunning, flash: $flash, startTimer: startTimer, resetTimer: resetTimer)
             }
 

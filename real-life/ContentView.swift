@@ -5,6 +5,7 @@
 //  Created by Shu Anzai on 2025/07/05.
 //
 
+
 import SwiftUI
 import SwiftData
 
@@ -69,8 +70,28 @@ struct CategoryGridView: View {
     @Binding var selectedCard: (String, Category)?
     @Binding var showCard: Bool
 
+    // 1. Read the horizontalSizeClass from the environment.
+    @Environment(\.horizontalSizeClass) var horizontalSizeClass
+
+    // 2. Create computed properties that adapt to the size class.
+    private var gridColumns: [GridItem] {
+        let gridSpacing: CGFloat = 15
+        // Use a larger minimum item size for iPads (.regular)
+        let minimumItemSize: CGFloat = horizontalSizeClass == .regular ? 240 : 140
+        return [GridItem(.adaptive(minimum: minimumItemSize), spacing: gridSpacing)]
+    }
+
+    private var buttonFontSize: CGFloat {
+        return horizontalSizeClass == .regular ? 26 : 20
+    }
+
+    private var buttonMinHeight: CGFloat {
+        return horizontalSizeClass == .regular ? 120 : 80
+    }
+
     var body: some View {
-        LazyVGrid(columns: [GridItem(.adaptive(minimum: 150))], spacing: 15) {
+        // 3. Use the adaptive properties in your layout.
+        LazyVGrid(columns: gridColumns, spacing: 15) {
             ForEach(categories.keys.sorted(), id: \.self) { key in
                 if let category = categories[key] {
                     Button(action: {
@@ -78,13 +99,13 @@ struct CategoryGridView: View {
                         self.showCard = true
                     }) {
                         Text(key)
-                            .font(.custom("Quicksand-Bold", size: 20))
+                            .font(.custom("Quicksand-Bold", size: buttonFontSize))
                             .fontWeight(.bold)
                             .padding()
-                            .frame(maxWidth: .infinity)
+                            .frame(maxWidth: .infinity, minHeight: buttonMinHeight)
                             .background(Color(hex: category.color))
                             .foregroundColor(.white)
-                            .cornerRadius(8)
+                            .cornerRadius(12) // Slightly larger radius for bigger buttons
                     }
                 }
             }
