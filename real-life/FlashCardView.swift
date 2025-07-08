@@ -102,6 +102,7 @@ struct CardSide: View {
         Text(text)
             .font(.custom("Quicksand-SemiBold", size: 32))
             .minimumScaleFactor(0.5) // ✅ ADDED: Shrinks text to fit
+            .multilineTextAlignment(.center) // ✅ ADDED: Centers the text
             .padding(40)
             .frame(maxWidth: 700, minHeight: 200)
             .background(Color(red: 0.06, green: 0.06, blue: 0.06))
