@@ -75,7 +75,7 @@ struct FlashCardView: View {
         timer = Timer.scheduledTimer(withTimeInterval: 1, repeats: true) { _ in
             if self.timeLeft > 0 {
                 self.timeLeft -= 1
-                if self.timeLeft <= 5 {
+                if self.timeLeft <= 10 {
                     self.flash.toggle()
                 }
             } else {
