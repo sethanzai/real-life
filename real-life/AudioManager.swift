@@ -30,15 +30,17 @@ class AudioManager: ObservableObject {
         }
     }
 
-    init() {
-        guard let url = Bundle.main.url(forResource: "background.mp3", withExtension: nil) else {
-            print("Error: background.mp3 file not found in the project bundle.")
+    func play(musicFileName: String, loop: Bool = false) {
+        guard let url = Bundle.main.url(forResource: musicFileName, withExtension: nil) else {
+            print("Error: \(musicFileName) file not found in the project bundle.")
             return
         }
 
         do {
             audioPlayer = try AVAudioPlayer(contentsOf: url)
-            audioPlayer?.numberOfLoops = -1 // Loop indefinitely
+            if loop {
+                audioPlayer?.numberOfLoops = -1 // Loop indefinitely
+            }
             
             // Store the initial volume
             self.volumeBeforeMute = audioPlayer?.volume ?? 1.0
@@ -47,9 +49,6 @@ class AudioManager: ObservableObject {
         } catch {
             print("Error loading audio player: \(error.localizedDescription)")
         }
-    }
-
-    func play() {
         audioPlayer?.play()
     }
 

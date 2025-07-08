@@ -14,6 +14,9 @@ struct FlashCardView: View {
 
     @State private var flipped = false
     @State private var question: Question?
+    
+    //Audio Manager
+    @ObservedObject var audioManager: AudioManager
 
     // Timer state
     @State private var timeLeft = 40
@@ -26,43 +29,68 @@ struct FlashCardView: View {
     }
 
     var body: some View {
-        VStack {
-            ZStack {
-                CardSide(text: question?.q ?? question?.text ?? "", color: Color(hex: category.color))
-                    .opacity(flipped ? 0 : 1)
+        GeometryReader { gr in
+            VStack {
+                if categoryName == "Quick Draw" {
+                    ZStack {
+                        CardSide(text: question?.q ?? question?.text ?? "", color: Color(hex: category.color))
+                            .opacity(flipped ? 0 : 1)
 
-                CardSide(text: question?.a ?? "", color: Color(hex: category.color))
-                    .rotation3DEffect(.degrees(180), axis: (x: 0, y: 1, z: 0))
-                    .opacity(flipped ? 1 : 0)
-            }
-            .rotation3DEffect(.degrees(flipped ? 180 : 0), axis: (x: 0, y: 1, z: 0))
-            .onTapGesture {
-                if isFlipCategory {
-                    withAnimation(.easeInOut(duration: 1.0)) {
-                        flipped.toggle()
+                        CardSide(text: question?.a ?? "", color: Color(hex: category.color))
+                            .rotation3DEffect(.degrees(180), axis: (x: 0, y: 1, z: 0))
+                            .opacity(flipped ? 1 : 0)
+                    }
+                    .rotation3DEffect(.degrees(flipped ? 180 : 0), axis: (x: 0, y: 1, z: 0))
+                    .onTapGesture {
+                        if isFlipCategory {
+                            withAnimation(.easeInOut(duration: 1.0)) {
+                                flipped.toggle()
+                            }
+                        }
+                    }
+                    .onAppear(perform: showRandomQuestion)
+                    .frame(width: gr.size.width, height: gr.size.height * 0.6)
+
+                    QuickDrawTimerView(timeLeft: $timeLeft, isTimerRunning: $isTimerRunning, flash: $flash, startTimer: startTimer, resetTimer: resetTimer)
+                        .frame(height: gr.size.height * 0.2)
+                }
+                else {
+                    ZStack {
+                        CardSide(text: question?.q ?? question?.text ?? "", color: Color(hex: category.color))
+                            .opacity(flipped ? 0 : 1)
+
+                        CardSide(text: question?.a ?? "", color: Color(hex: category.color))
+                            .rotation3DEffect(.degrees(180), axis: (x: 0, y: 1, z: 0))
+                            .opacity(flipped ? 1 : 0)
+                    }
+                    .rotation3DEffect(.degrees(flipped ? 180 : 0), axis: (x: 0, y: 1, z: 0))
+                    .onTapGesture {
+                        if isFlipCategory {
+                            withAnimation(.easeInOut(duration: 1.0)) {
+                                flipped.toggle()
+                            }
+                        }
+                    }
+                    .onAppear(perform: showRandomQuestion)
+                    .padding(.top, gr.size.height * 0.2)
+                    .frame(width: gr.size.width)
+                }
+
+                Button("New Question") {
+                    showRandomQuestion()
+                    flipped = false
+                    if categoryName == "Quick Draw" {
+                        resetTimer()
                     }
                 }
-            }
-            .onAppear(perform: showRandomQuestion)
+                .padding()
 
-            if categoryName == "Quick Draw" {
-                QuickDrawTimerView(timeLeft: $timeLeft, isTimerRunning: $isTimerRunning, flash: $flash, startTimer: startTimer, resetTimer: resetTimer)
-            }
-
-            Button("New Question") {
-                showRandomQuestion()
-                flipped = false
-                if categoryName == "Quick Draw" {
-                    resetTimer()
+                Button("Back to Categories") {
+                    showCard = false
+                    timer?.invalidate()
                 }
+                .padding()
             }
-            .padding()
-
-            Button("Back to Categories") {
-                showCard = false
-                timer?.invalidate()
-            }
-            .padding()
         }
     }
 
@@ -79,6 +107,7 @@ struct FlashCardView: View {
                     self.flash.toggle()
                 }
             } else {
+                audioManager.play(musicFileName: "timesup.mp3")
                 self.timer?.invalidate()
                 self.isTimerRunning = false
                 self.flash = false
@@ -117,5 +146,5 @@ struct CardSide: View {
 }
 
 #Preview {
-    FlashCardView(categoryName: "assadf", category: Category(label: "red", color: "red", questions: []), showCard: .constant(true))
+    FlashCardView(categoryName: "Quick Draw", category: Category(label: "red", color: "red", questions: []), showCard: .constant(true), audioManager: AudioManager())
 }

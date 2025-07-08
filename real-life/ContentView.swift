@@ -18,7 +18,10 @@ struct ContentView: View {
     var body: some View {
         GeometryReader { gr in
             ZStack {
+//                SplashScreenView()
+//                    .ignoresSafeArea()
                 Color.black.ignoresSafeArea()
+                    .opacity(0.8)
 
                 VStack(spacing: 40) {
                     Text("The Real Life")
@@ -31,11 +34,9 @@ struct ContentView: View {
                     }
 
                     if let selectedCard = selectedCard, showCard {
-                        FlashCardView(categoryName: selectedCard.0, category: selectedCard.1, showCard: $showCard)
+                        FlashCardView(categoryName: selectedCard.0, category: selectedCard.1, showCard: $showCard, audioManager: audioManager)
                     }
-                }
-                .padding(20)
-                
+                }                
                 
                 VStack {
                     HStack {
@@ -56,10 +57,11 @@ struct ContentView: View {
                 .frame(width: gr.size.width, height: gr.size.height)
             }
             .onAppear {
-                audioManager.play()
+                audioManager.play(musicFileName: "background.mp3", loop: true)
             }
             .onChange(of: showCard) { _, isShowing in
-                isShowing ? audioManager.pause() : audioManager.play()
+                guard audioManager.isMuted == false else { return }
+                isShowing ? audioManager.pause() : audioManager.play(musicFileName: "background.mp3", loop: true)
             }
         }
     }
