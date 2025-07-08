@@ -46,7 +46,7 @@ struct FlashCardView: View {
             .onAppear(perform: showRandomQuestion)
 
             if categoryName == "Quick Draw" {
-                QuickDrawTimerView(timeLeft: $timeLeft, isTimerRunning: $isTimerRunning, flash: $flash, startTimer: startTimer, resetTimer: resetTimer)
+                QuickDrawTimerView(timeLeft: $timeLeft, isTimerRunning: $isTimerRunning, flashColor: $flash, startTimer: startTimer, resetTimer: resetTimer)
             }
 
             Button("New Question") {
