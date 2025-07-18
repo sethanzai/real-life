@@ -49,12 +49,16 @@ struct FlashCardView: View {
                         }
                     }
                     .onAppear(perform: showRandomQuestion)
-                    .frame(width: gr.size.width, height: gr.size.height * 0.6)
+                    // ✅ MODIFIED: Removed rigid height to allow flexibility.
+                    .frame(width: gr.size.width)
 
                     QuickDrawTimerView(timeLeft: $timeLeft, isTimerRunning: $isTimerRunning, flash: $flash, startTimer: startTimer, resetTimer: resetTimer)
-                        .frame(height: gr.size.height * 0.2)
-                }
-                else {
+                        // ✅ MODIFIED: Removed rigid height.
+
+                    // ✅ ADDED: A Spacer to push the buttons down, preventing overlap.
+                    Spacer()
+
+                } else {
                     ZStack {
                         CardSide(text: question?.q ?? question?.text ?? "", color: Color(hex: category.color))
                             .opacity(flipped ? 0 : 1)
@@ -93,7 +97,6 @@ struct FlashCardView: View {
             }
         }
     }
-
     private func showRandomQuestion() {
         self.question = category.questions.randomElement()
     }
