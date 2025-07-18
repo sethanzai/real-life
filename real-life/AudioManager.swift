@@ -29,6 +29,25 @@ class AudioManager: ObservableObject {
             }
         }
     }
+    
+    // **MODIFICATION**: Add an initializer to configure the audio session.
+    // This is the most efficient place to set up the audio session,
+    // as it only needs to be done once when the AudioManager is created.
+    init() {
+        configureAudioSession()
+    }
+    
+    // **MODIFICATION**: New function to set the audio session category.
+    private func configureAudioSession() {
+        do {
+            // Set the audio session category to .playback.
+            // This allows your app's audio to play even when the device is in silent mode.
+            try AVAudioSession.sharedInstance().setCategory(.playback, mode: .default, options: [.mixWithOthers])
+            try AVAudioSession.sharedInstance().setActive(true)
+        } catch {
+            print("Error setting up audio session: \(error.localizedDescription)")
+        }
+    }
 
     func play(musicFileName: String, loop: Bool = false) {
         guard let url = Bundle.main.url(forResource: musicFileName, withExtension: nil) else {
@@ -42,18 +61,25 @@ class AudioManager: ObservableObject {
                 audioPlayer?.numberOfLoops = -1 // Loop indefinitely
             }
             
-            // Store the initial volume
-            self.volumeBeforeMute = audioPlayer?.volume ?? 1.0
+            // Restore mute state if necessary
+            if isMuted {
+                audioPlayer?.volume = 0
+            }
             
             audioPlayer?.prepareToPlay()
+            audioPlayer?.play()
         } catch {
             print("Error loading audio player: \(error.localizedDescription)")
         }
-        audioPlayer?.play()
     }
 
     func pause() {
         audioPlayer?.pause()
+    }
+    
+    func stop() {
+        audioPlayer?.stop()
+        audioPlayer = nil // Release the player instance
     }
 
     func toggleMute() {
